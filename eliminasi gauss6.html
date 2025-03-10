@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; My sample book</title>
+    <title>Eliminasi gauss &#8212; My sample book</title>
   
   
   
@@ -59,10 +59,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'eliminasi gauss6';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Sistem Persamaan Linier" href="Sistem%20Persamaan%20Linier.html" />
+    <link rel="prev" title="Sistem Persamaan Linier" href="Sistem%20Persamaan%20Linier.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -145,7 +143,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -176,15 +174,15 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     <no title>
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Sistem%20Persamaan%20Linier.html">Sistem Persamaan Linier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="eliminasi%20gauss6.html">Eliminasi gauss</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Eliminasi gauss</a></li>
 </ul>
 
     </div>
@@ -256,7 +254,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Feliminasi gauss6.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -286,7 +284,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/eliminasi gauss6.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -357,9 +355,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -370,7 +366,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Eliminasi gauss</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -384,11 +380,62 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>Halo, selamat datang di web saya.
-Disini saya menyediakan beberapa materi tentang Komputasi Aljabar Linear
-Enjoy in my web!</p>
-<div class="toctree-wrapper compound">
+  <section id="eliminasi-gauss">
+<h1>Eliminasi gauss<a class="headerlink" href="#eliminasi-gauss" title="Link to this heading">#</a></h1>
+<p><strong>Metode Eliminasi Gauss</strong>
+Metode penyelesaian gauss adalah cara untuk menyelesaikan sistem persamaan liniear dengan mengubahnya menjadi bentuk yang lebih sederhana, sehingga lebih mudah dihitung. Caranya adalah dengan mengubah persamaan satu persatu, menghilangkan variabel secara bertahap, sampai akhirnya bisa menemukan nilai dari setiap variabel.</p>
+<p>Berikut adalah langkah langkah menyelesaikan sistem persamaan linear menggunakan metode eliminasi gauss, serta menampilkan solusinya secara grafis menggunakan GeoGebra</p>
+<hr class="docutils" />
+<p><strong>Sistem Persamaan Linear yang digunakan</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x + y + z = 6
+2x - y + 3z = 11
+3x + 4y + z = 19
+</pre></div>
 </div>
+<p><em>Matriksnya, yaitu:</em></p>
+<p>\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 6 \
+2 &amp; 3 &amp; 1 &amp; | 11 \
+3 &amp; 5 &amp; 2 &amp; | 19
+\end{bmatrix}</p>
+<p><strong>Eliminasi Gauss(Operasi baris)</strong></p>
+<p>Membuat elemen (2,1) dan (3,1) menjadi nol</p>
+<p><strong>a. Elemen pertama (2,1)</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(B_2= B_2 - 2B_1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(B_3 = B_3 - 3B_1\)</span></p></li>
+</ul>
+<p>Hasilnya:</p>
+<p>\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 6 \
+0 &amp; 1 &amp; -1 &amp;  | -1 \
+0 &amp; 2 &amp; -1 &amp; | 1
+\end{bmatrix}</p>
+<p><strong>b. Elemen kedua (3,2)</strong></p>
+<p><span class="math notranslate nohighlight">\(B_3 = B_3 - 2B_2\)</span></p>
+<p>Hasilnya:</p>
+<p>\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 6 \
+0 &amp; 1 &amp; -1 &amp; | -1 \
+0 &amp; 0 &amp; -1 &amp; | 3
+\end{bmatrix}</p>
+<p><strong>Subsitusi Mundur</strong>
+Dari baris ketiga
+z = 3</p>
+<p>Subsitusikan z=3 ke baris kedua:
+y-3= -1
+y=2</p>
+<p>Subsitusikan y=2 dan z=3 ke baris pertama:
+x + 2 + 3 = 6
+x= 1</p>
+<p><strong>Solusi</strong>
+Solusi sistem persamaan ini adalah:
+(x,y,z)=(1,2,3)</p>
+<hr class="docutils" />
+<p><strong>Contoh dengan GeoGebra</strong>
+<img alt="GeoGebra KAL" src="https://hackmd.io/_uploads/SyWuGXmoyl.png" />
+<a class="reference external" href="https://">https://www.geogebra.org/classic/psn4sb4g</a></p>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -420,14 +467,14 @@ Enjoy in my web!</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
+    <a class="left-prev"
        href="Sistem%20Persamaan%20Linier.html"
-       title="next page">
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Sistem Persamaan Linier</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
